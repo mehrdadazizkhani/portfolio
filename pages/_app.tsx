@@ -1,15 +1,15 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Josefin_Sans } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
-const plusJosefinSans = Josefin_Sans({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-josefin",
+  variable: "--font-montserrat",
 });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${plusJosefinSans.variable} font-josefin`}>
+    <main className={`${montserrat.variable} font-montserrat`}>
       <Component {...pageProps} />
     </main>
   );

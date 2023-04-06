@@ -11,18 +11,18 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      josefin: ["var(--font-josefin)", ...fontFamily.sans],
+      montserrat: ["var(--font-montserrat)", ...fontFamily.sans],
     },
     colors: {
       light: {
-        primary: "#ffffff",
+        primary: "#EBECF0",
         accent: "#3563E9",
         content: "#181818",
       },
       dark: {
         primary: "#181818",
         accent: "#3563E9",
-        content: "#ffffff",
+        content: "#EBECF0",
       },
     },
     extend: {},

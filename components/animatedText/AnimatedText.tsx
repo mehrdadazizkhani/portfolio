@@ -35,7 +35,7 @@ const singleWordAnimation = {
 const AnimatedText = ({ text }: Props) => {
   return (
     <motion.div
-      className="flex gap-3 text-4xl capitalize text-light-content dark:text-dark-content"
+      className="flex gap-3 w-full md:text-4xl text-xl flex-wrap justify-center capitalize text-light-content dark:text-dark-content"
       variants={textAnimation}
       initial="initial"
       animate="animate"

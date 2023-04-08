@@ -1,41 +1,60 @@
 import Certificate from "./Certificate";
 import certificates from "../../data/certificates";
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
-import Image from "next/image";
+import { RiArrowLeftSFill, RiArrowRightSFill } from "react-icons/ri";
 
 const Certificates = () => {
-  const [currentCertificate, setCurrentCertificate] = useState(5);
+  const [currentCertificate, setCurrentCertificate] = useState(1);
 
+  const handleLeft = () => {
+    setCurrentCertificate(
+      currentCertificate === 1 ? certificates.length : currentCertificate - 1
+    );
+  };
+
+  const handleRight = () => {
+    setCurrentCertificate(
+      currentCertificate === certificates.length ? 1 : currentCertificate + 1
+    );
+  };
+  console.log(currentCertificate);
   return (
-    <section className="h-full relative flex flex-col gap-10 justify-between items-center">
-      <div className="h-full w-full flex justify-center items-center">
-        {certificates.map((certificate) => (
-          <div
-            className={`w-full ${
-              certificate.id !== currentCertificate && "hidden"
+    <section className="relative flex h-full items-center justify-between overflow-hidden md:px-10">
+      {certificates.map((certificate) => (
+        <div
+          className="absolute hidden md:flex items-center justify-center h-full top-0 left-0 w-full"
+          key={certificate.id}
+        >
+          <Image
+            src={certificate.image}
+            alt={`${certificate.name} certificate`}
+            className={`w-auto h-[500px] transition-all duration-500 ${
+              currentCertificate === certificate.id ? "opacity-5" : "opacity-0"
             }`}
-          >
-            <Certificate data={certificate} key={certificate.id} />
-          </div>
-        ))}
-      </div>
-      <div className="overflow-x-scroll z-10 scrollbar-none h-36">
-        <div className="flex gap-3">
-          {certificates.map((certificate) => (
-            <Image
-              onClick={() => {
-                setCurrentCertificate(certificate.id);
-              }}
-              src={certificate.image}
-              alt={certificate.name}
-              key={certificate.id}
-              className={`w-[150px] cursor-pointer ${
-                certificate.id !== currentCertificate && "opacity-40"
-              }`}
-            />
-          ))}
+          />
         </div>
-      </div>
+      ))}
+      <RiArrowLeftSFill
+        onClick={handleLeft}
+        className="cursor-pointer text-3xl md:text-5xl h-full text-light-content dark:text-dark-content z-20"
+      />
+      {certificates.map((certificate) => (
+        <div
+          key={certificate.id}
+          className={`${
+            currentCertificate !== certificate.id ? "opacity-0" : "opacity-100"
+          } absolute w-full px-8 flex justify-center h-full top-0 left-0 items-center transition-all duration-1000`}
+        >
+          {currentCertificate === certificate.id && (
+            <Certificate data={certificate} />
+          )}
+        </div>
+      ))}
+      <RiArrowRightSFill
+        onClick={handleRight}
+        className="cursor-pointer text-3xl md:text-5xl h-full text-light-content dark:text-dark-content z-10"
+      />
     </section>
   );
 };

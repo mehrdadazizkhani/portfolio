@@ -1,5 +1,5 @@
 import coursera from "../public/certificates/coursera.png";
-// import quera from "../public/certificates/quera.png";
+import quera from "../public/certificates/quera.png";
 import js from "../public/certificates/javascript.jpg";
 import react from "../public/certificates/react.jpg";
 import front from "../public/certificates/front.jpg";

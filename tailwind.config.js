@@ -15,17 +15,23 @@ module.exports = {
     },
     colors: {
       light: {
-        primary: "#EBECF0",
+        primary: "#ffffff",
+        secondary: "#e0e0e0",
         accent: "#3563E9",
         content: "#181818",
       },
       dark: {
         primary: "#181818",
+        secondary: "#313131",
         accent: "#3563E9",
         content: "#EBECF0",
       },
     },
-    extend: {},
+    extend: {
+      animation: {
+        "spin-slow": "spin 6s linear infinite",
+      },
+    },
   },
   plugins: [require("tailwind-scrollbar")],
 };

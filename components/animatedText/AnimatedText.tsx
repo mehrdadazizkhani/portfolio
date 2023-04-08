@@ -35,7 +35,7 @@ const singleWordAnimation = {
 const AnimatedText = ({ text }: Props) => {
   return (
     <motion.div
-      className="flex gap-3 w-full md:text-4xl text-xl flex-wrap justify-center capitalize text-light-content dark:text-dark-content"
+      className="flex lg:gap-3 gap-x-2 gap-y-1 w-full font-bold lg:text-4xl text-lg flex-wrap justify-center capitalize text-light-content dark:text-dark-content"
       variants={textAnimation}
       initial="initial"
       animate="animate"
@@ -44,8 +44,6 @@ const AnimatedText = ({ text }: Props) => {
         <motion.span
           className="inline-block"
           variants={singleWordAnimation}
-          initial="initial"
-          animate="animate"
           key={word + "-" + index}
         >
           {word}{" "}

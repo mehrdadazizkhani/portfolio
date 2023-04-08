@@ -20,7 +20,7 @@ const Layout = ({ children }: Props) => {
       <Footer />
       <div className="absolute top-0 w-full h-full flex justify-center items-center">
         <div className="mx-auto container flex justify-center items-center">
-          <div className="md:h-[calc(100vh-96px)] h-[calc(100vh-56px)] rounded-xl md:w-[calc(100%-72px)] w-[calc(100%-50px)] border border-light-content dark:border-dark-content"></div>
+          <div className="md:h-[calc(100vh-96px)] h-[calc(100dvh-56px)] rounded-xl md:w-[calc(100%-72px)] w-[calc(100%-50px)] border border-light-content dark:border-dark-content"></div>
         </div>
       </div>
     </main>

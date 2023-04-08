@@ -21,11 +21,13 @@ const Certificate = ({ data }: Props) => {
       <div className="mb-12 flex items-center justify-center">
         <div className="relative aspect-square w-16">
           <div className="absolute -bottom-[40px] left-[calc(50%-20px)] border-[20px] border-light-content border-b-[transparent] dark:border-dark-content dark:border-b-[transparent]"></div>
-          <div className="absolute h-full w-full rotate-0 bg-light-content dark:bg-dark-content"></div>
-          <div className="absolute h-full w-full rotate-[18deg] bg-light-content dark:bg-dark-content"></div>
-          <div className="absolute h-full w-full rotate-[36deg] bg-light-content dark:bg-dark-content"></div>
-          <div className="absolute h-full w-full rotate-[54deg] bg-light-content dark:bg-dark-content"></div>
-          <div className="absolute h-full w-full rotate-[72deg] bg-light-content dark:bg-dark-content"></div>
+          <div className="absolute h-full w-full animate-spin-slow">
+            <div className="absolute h-full w-full rotate-[0deg] bg-light-content dark:bg-dark-content"></div>
+            <div className="absolute h-full w-full rotate-[18deg] bg-light-content dark:bg-dark-content"></div>
+            <div className="absolute h-full w-full rotate-[36deg] bg-light-content dark:bg-dark-content"></div>
+            <div className="absolute h-full w-full rotate-[54deg] bg-light-content dark:bg-dark-content"></div>
+            <div className="absolute h-full w-full rotate-[72deg] bg-light-content dark:bg-dark-content"></div>
+          </div>
           <div className="absolute h-full w-full rounded-full bg-dark-content dark:bg-light-content"></div>
           <Image
             src={data.logo}

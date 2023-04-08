@@ -12,7 +12,7 @@ const Layout = ({ children }: Props) => {
     <main className="bg-light-primary dark:bg-dark-primary relative">
       <Header />
       <Navbar />
-      <section className="md:h-[calc(100vh-192px)] h-[calc(100vh-112px)] px-4 flex items-center justify-center container mx-auto">
+      <section className="md:h-[calc(100vh-192px)] h-[calc(100dvh-112px)] px-4 flex items-center justify-center container mx-auto">
         <div className="w-[calc(100%-72px)] h-full overflow-hidden z-10">
           {children}
         </div>

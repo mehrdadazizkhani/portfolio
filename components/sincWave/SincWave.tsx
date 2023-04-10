@@ -21,6 +21,8 @@ const SincWave: React.FC<SincWaveProps> = ({
 }) => {
   // Get canvas ref using useRef hook
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  // Get animation frame ID ref using useRef hook
+  const animationFrameIdRef = useRef<number>();
 
   // Draw the waves using canvas context
   const drawWaves = (
@@ -104,6 +106,8 @@ const SincWave: React.FC<SincWaveProps> = ({
 
     const animationId = requestAnimationFrame(animate);
 
+    animationFrameIdRef.current = animationId;
+
     return () => cancelAnimationFrame(animationId);
   };
 
@@ -118,7 +122,7 @@ const SincWave: React.FC<SincWaveProps> = ({
     canvas.style.width = "100%";
     canvas.style.height = "100%";
 
-    animateWaves(
+    const cleanup = animateWaves(
       canvas,
       color,
       thickness,
@@ -129,7 +133,14 @@ const SincWave: React.FC<SincWaveProps> = ({
       animationAmplitude
     );
 
-    // return () => cancelAnimationFrame(animateWaves);
+    // Return the cleanup function
+    return () => {
+      cleanup();
+      // Cancel the animation frame using the ID stored in the ref
+      if (animationFrameIdRef.current) {
+        cancelAnimationFrame(animationFrameIdRef.current);
+      }
+    };
   }, [
     color,
     thickness,

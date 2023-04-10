@@ -13,6 +13,7 @@ const Summary = () => {
         src={profilePhoto}
         alt={"Profile photo"}
         className="w-[250px] lg:w-[400px] xl:w-[500px] 2xl:w-[600px]"
+        priority={true}
       />
       <div className="w-full md:w-1/2 flex flex-col gap-4 lg:gap-6">
         <AnimatedText text="Turning Vision Into Reality With Code And Design." />

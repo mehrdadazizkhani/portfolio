@@ -5,17 +5,17 @@ import SincWave from "../sincWave/SincWave";
 
 const Header = () => {
   return (
-    <nav className="container mx-auto flex items-center justify-between px-12 md:px-20 h-14 md:h-24">
+    <nav className="container mx-auto flex items-center justify-between px-12 md:px-20 h-14 md:h-24 overflow-hidden">
       <div className="flex items-center gap-3 bg-light-primary dark:bg-dark-primary z-20 pr-2 pb-2 mt-2">
         <div className="flex cursor-pointer aspect-square h-10 items-center justify-center rounded-full bg-dark-primary text-2xl p-2 font-bold text-dark-content dark:bg-light-primary dark:text-light-content">
           <Link href={"/"}>M</Link>
         </div>
-        <span className="text-light-content md:inline hidden dark:text-dark-content uppercase text-sm lg:text-2xl">
+        <span className="text-light-content md:inline hidden dark:text-dark-content uppercase text-sm lg:text-2xl whitespace-nowrap">
           Mehrdad Azizkhani
         </span>
       </div>
-      <div className="relative flex items-center gap-4 z-20 md:mr-12 mr-2">
-        <div className="absolute hidden w-[300px] h-[80px] top-[calc(50%-40px)] md:flex left-[calc(50%-150px)] bg-light-primary dark:bg-dark-primary text-light-content dark:text-dark-content">
+      <div className="relative flex items-center justify-center gap-4 z-20 lg:w-[500px] lg:h-[160px]">
+        <div className="absolute hidden h-full w-full lg:flex bg-light-primary dark:bg-dark-primary text-light-content dark:text-dark-content">
           <SincWave
             color={"#3563E9"}
             thickness={0.5}

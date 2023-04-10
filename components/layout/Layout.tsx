@@ -12,7 +12,7 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <div className="relative h-[100dvh] w-full overflow-hidden bg-light-primary gap-2 dark:bg-dark-primary text-light-content dark:text-dark-content flex flex-col justify-center items-center portrait:hidden lg:landscape:hidden">
+      <div className="h-[100dvh] w-full overflow-hidden bg-light-primary gap-2 dark:bg-dark-primary text-light-content dark:text-dark-content flex flex-col justify-center items-center portrait:hidden lg:landscape:hidden">
         <div className="relative w-32 h-12 z-10">
           <SlScreenSmartphone
             size={50}
@@ -28,17 +28,6 @@ const Layout = ({ children }: Props) => {
           />
         </div>
         <p className="uppercase font-semibold z-10">please turn your phone</p>
-        <div className="absolute h-full w-full top-8 left-0 opacity-70">
-          <SincWave
-            color={"#3563E9"}
-            thickness={1}
-            scale={21}
-            frequency={0.02}
-            amplitudesMax={[150, 90, 50, 40, 300]}
-            animationSpeed={0.05}
-            animationAmplitude={0.2}
-          />
-        </div>
       </div>
       <main className="bg-light-primary dark:bg-dark-primary relative landscape:hidden lg:landscape:block">
         <Header />

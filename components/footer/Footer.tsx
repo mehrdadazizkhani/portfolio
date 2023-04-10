@@ -16,8 +16,8 @@ const Footer = () => {
             animationAmplitude={0.2}
           />
         </div>
-        <div className="absolute text-light-content font-bold dark:text-dark-content text-sm flex justify-center items-center h-full w-full z-10 top-0 left-0 uppercase drop-shadow-md shadow-[red]">
-          mehrdad azizkhani
+        <div className="absolute text-light-content font-semibold dark:text-dark-content text-xs flex justify-center items-center h-full w-full z-10 top-0 left-0 uppercase drop-shadow-md shadow-[red]">
+          designed by mehrdad azizkhani
         </div>
       </div>
     </footer>

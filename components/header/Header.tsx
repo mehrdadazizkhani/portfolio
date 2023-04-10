@@ -14,7 +14,7 @@ const Header = () => {
           Mehrdad Azizkhani
         </span>
       </div>
-      <div className="relative flex items-center gap-4 z-20 md:mr-32 mr-2">
+      <div className="relative flex items-center gap-4 z-20 md:mr-12 mr-2">
         <div className="absolute hidden w-[300px] h-[80px] top-[calc(50%-40px)] md:flex left-[calc(50%-150px)] bg-light-primary dark:bg-dark-primary text-light-content dark:text-dark-content">
           <SincWave
             color={"#3563E9"}

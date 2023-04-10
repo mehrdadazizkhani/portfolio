@@ -129,7 +129,7 @@ const SincWave: React.FC<SincWaveProps> = ({
       animationAmplitude
     );
 
-    return () => cancelAnimationFrame(animateWaves);
+    // return () => cancelAnimationFrame(animateWaves);
   }, [
     color,
     thickness,

@@ -18,7 +18,6 @@ const Certificates = () => {
       currentCertificate === certificates.length ? 1 : currentCertificate + 1
     );
   };
-  console.log(currentCertificate);
   return (
     <section className="relative flex h-full items-center justify-between overflow-hidden md:px-10">
       {certificates.map((certificate) => (

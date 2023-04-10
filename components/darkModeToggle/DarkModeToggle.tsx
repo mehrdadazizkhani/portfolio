@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const DarkModeToggle = () => {
   const [toggle, setToggle] = useState(true);
-  const sunRays = [1, 2, 3, 4, 5, 6];
 
   useEffect(() => {
     handleDarkMode();
@@ -34,7 +32,7 @@ const DarkModeToggle = () => {
 
   return (
     <div
-      className="p-2 cursor-pointer rounded-full border border-light-content dark:border-dark-content"
+      className="p-2 z-30 cursor-pointer rounded-full border border-light-content dark:border-dark-content bg-light-primary dark:bg-dark-primary"
       onClick={handleToggle}
     >
       <div className="relative rounded-full text-2xl text-light-content dark:text-dark-content">

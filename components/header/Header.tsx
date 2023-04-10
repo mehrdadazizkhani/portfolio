@@ -1,6 +1,7 @@
 import Link from "next/link";
 import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
 import { SiLinkedin, SiGithub, SiTwitter, SiInstagram } from "react-icons/si";
+import SincWave from "../sincWave/SincWave";
 
 const Header = () => {
   return (
@@ -13,7 +14,18 @@ const Header = () => {
           Mehrdad Azizkhani
         </span>
       </div>
-      <div className="flex items-center gap-4 bg-light-primary dark:bg-dark-primary z-20 px-2">
+      <div className="relative flex items-center gap-4 z-20 md:mr-32 mr-2">
+        <div className="absolute hidden w-[300px] h-[80px] top-[calc(50%-40px)] md:flex left-[calc(50%-150px)] bg-light-primary dark:bg-dark-primary text-light-content dark:text-dark-content">
+          <SincWave
+            color={"#3563E9"}
+            thickness={0.5}
+            scale={16}
+            frequency={0.02}
+            amplitudesMax={[120, 90, 60, 40, 200]}
+            animationSpeed={0.05}
+            animationAmplitude={0.2}
+          />
+        </div>
         <a
           className="social"
           href="https://linkedin.com/in/mehrdad-azizkhani-2a8313a5/"

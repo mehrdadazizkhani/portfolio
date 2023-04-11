@@ -1,10 +1,12 @@
 import Layout from "@/components/layout/Layout";
+import Projects from "@/components/projects/Projects";
 import SincWave from "@/components/sincWave/SincWave";
 
 const ProjectsPage = () => {
   return (
     <Layout>
-      <section className="w-full h-full text-light-content flex-col dark:text-dark-content flex justify-center items-center">
+      <Projects />
+      {/* <section className="w-full h-full text-light-content flex-col dark:text-dark-content flex justify-center items-center">
         <div className="h-20 aspect-square">
           <SincWave
             color={"#3563E9"}
@@ -18,7 +20,7 @@ const ProjectsPage = () => {
         </div>
         <h1 className="animate-pulse">coming soon</h1>
         <h1 className="font-bold">PROJECTS</h1>
-      </section>
+      </section> */}
     </Layout>
   );
 };

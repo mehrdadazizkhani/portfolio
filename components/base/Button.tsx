@@ -16,7 +16,7 @@ const Button = ({ children, target, download, href, locale }: Props) => {
       target={target}
       locale={locale}
       download={download}
-      className="flex w-fit items-center gap-2 bg-light-content text-light-primary capitalize dark:text-dark-primary dark:bg-dark-content rounded-md py-2 px-4 whitespace-nowrap"
+      className="flex transition duration-300 w-fit items-center gap-2 bg-light-content text-light-primary capitalize dark:text-dark-primary dark:bg-dark-content rounded-md py-2 px-4 whitespace-nowrap hover:bg-light-accent dark:hover:bg-dark-accent cursor-pointer"
     >
       {children}
     </Link>

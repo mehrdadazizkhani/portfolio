@@ -28,7 +28,7 @@ const Summary = () => {
           </Button>
           <a
             href="mailto:mehrdad.azizkhani@gmail.com"
-            className="text-light-content dark:text-dark-content"
+            className="text-light-content dark:text-dark-content font-semibold"
           >
             Contact Me
           </a>

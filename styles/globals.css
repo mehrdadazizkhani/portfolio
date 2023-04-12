@@ -4,10 +4,16 @@
 
 @layer components {
   .social {
-    @apply text-2xl z-30 text-light-content transition-transform duration-300 hover:-translate-y-1 dark:text-dark-content;
+    @apply text-2xl z-30 text-light-content bg-light-primary dark:bg-dark-primary transition-transform duration-300 hover:-translate-y-1 dark:text-dark-content;
   }
 
   .sun {
     @apply h-full w-[15%] rounded-full bg-light-primary transition-all duration-1000;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
   }
 }

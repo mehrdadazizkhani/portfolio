@@ -9,10 +9,10 @@ const Contact = () => {
       <AnimatedText text={"Let's Collaborate"} hover={true} />
       <p className="md:w-[600px] text-light-content dark:text-dark-content">
         Thank you for visiting my portfolio! Whether you have a project in mind
-        or just want to connect, I'm happy to hear from you. As a front-end
-        developer, I offer website design and development services. Let's
+        or just want to connect, I&apos;m happy to hear from you. As a front-end
+        developer, I offer website design and development services. Let&apos;s
         collaborate to bring your ideas to life! Contact me via email or social
-        media, and I'll get back to you as soon as possible.
+        media, and I&apos;ll get back to you as soon as possible.
       </p>
       <div className="flex gap-2 items-center flex-col md:flex-row">
         <Button href="mailto:mehrdad.azizkhani@gmail.com">

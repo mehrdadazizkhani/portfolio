@@ -3,7 +3,7 @@ import SincWave from "@/components/sincWave/SincWave";
 
 const AboutPage = () => {
   return (
-    <Layout>
+    <Layout title={"About"}>
       <section className="w-full h-full text-light-content flex-col dark:text-dark-content flex justify-center items-center">
         <div className="h-20 aspect-square">
           <SincWave

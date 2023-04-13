@@ -6,6 +6,7 @@ import desktopMockup from "../../public/responsive mockups/mockup3.png";
 import { motion } from "framer-motion";
 import Button from "../base/Button";
 import { SiGithub } from "react-icons/si";
+import AnimatedText from "../animatedText/AnimatedText";
 
 interface Props {
   data: {
@@ -121,10 +122,8 @@ const Project = ({ data }: Props) => {
       </div>
       <div className="flex justify-center items-center">
         <div className="flex flex-col gap-2 md:gap-6 items-center">
-          <h2 className="md:font-bold font-semibold uppercase hover:tracking-widest transition-all duration-300 text-xl md:text-3xl text-light-content dark:text-dark-content">
-            {data.name}
-          </h2>
-          <div className="flex md:gap-2 gap-1 flex-wrap">
+          <AnimatedText text={data.name} hover={true} />
+          <div className="flex md:gap-2 gap-1 flex-wrap md:w-[600px] justify-center">
             {data.stack.map((tech, index) => (
               <span
                 className="bg-light-content/90 dark:font-semibold text-xs md:text-base px-2 md:rounded-md rounded-sm text-light-primary dark:text-dark-primary dark:bg-dark-content/90"
@@ -134,10 +133,10 @@ const Project = ({ data }: Props) => {
               </span>
             ))}
           </div>
-          <p className="text-sm sm:text-base text-light-content dark:text-dark-content">
+          <p className="text-sm sm:text-base md:w-[600px] text-light-content dark:text-dark-content">
             {data.description}
           </p>
-          <div className="flex gap-2 font-semibold">
+          <div className="flex gap-2">
             <Button target="_blank" href={data.demoURL}>
               demo
             </Button>

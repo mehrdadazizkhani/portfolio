@@ -6,7 +6,7 @@ import SincWave from "../sincWave/SincWave";
 const Header = () => {
   return (
     <nav className="container mx-auto flex items-center justify-between px-12 md:px-20 h-14 md:h-24 overflow-hidden">
-      <div className="flex items-center gap-3 bg-light-primary dark:bg-dark-primary z-20 pr-2 pb-2 mt-2">
+      <div className="flex items-center gap-3 bg-light-primary dark:bg-dark-primary z-20">
         <div className="flex cursor-pointer aspect-square h-10 items-center justify-center rounded-full bg-dark-primary text-2xl p-2 font-bold text-dark-content dark:bg-light-primary dark:text-light-content">
           <Link href={"/"}>M</Link>
         </div>

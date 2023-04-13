@@ -19,9 +19,9 @@ const Navbar = () => {
               />
             </div>
             <NavItem title="home" to="/" />
-            <NavItem title="about" to="/about" />
             <NavItem title="projects" to="/projects" />
-            <NavItem title="certificates" to="/certificates" />
+            <NavItem title="about" to="/about" />
+            <NavItem title="contact" to="/contact" />
           </div>
         </div>
       </div>

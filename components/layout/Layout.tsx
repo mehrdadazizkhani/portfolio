@@ -19,7 +19,7 @@ const Layout = ({ children, title }: Props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="h-[100dvh] w-full overflow-hidden bg-light-primary gap-2 dark:bg-dark-primary text-light-content dark:text-dark-content flex flex-col justify-center items-center portrait:hidden lg:landscape:hidden">
+      <div className="absolute h-[100dvh] w-full overflow-hidden z-50 bg-light-primary gap-2 dark:bg-dark-primary text-light-content dark:text-dark-content flex flex-col justify-center items-center portrait:hidden lg:landscape:hidden">
         <div className="relative w-32 h-12 z-10">
           <SlScreenSmartphone
             size={50}
@@ -36,7 +36,7 @@ const Layout = ({ children, title }: Props) => {
         </div>
         <p className="uppercase font-semibold z-10">please turn your phone</p>
       </div>
-      <main className="bg-light-primary dark:bg-dark-primary relative landscape:hidden lg:landscape:block">
+      <main className="bg-light-primary dark:bg-dark-primary relative">
         <Header />
         <Navbar />
         <section className="md:h-[calc(100vh-192px)] h-[calc(100dvh-112px)] px-4 flex items-center justify-center container mx-auto">

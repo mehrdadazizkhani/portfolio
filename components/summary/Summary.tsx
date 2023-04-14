@@ -22,7 +22,7 @@ const Summary = () => {
           showcasing my expertise in React.js and web development.
         </p>
         <div className="w-full flex justify-center items-center gap-3 lg:text-lg">
-          <Button href={"/mehrdButtondazizkhani.pdf"} download target="_blank">
+          <Button href={"/mehrdadazizkhani.pdf"} download target="_blank">
             Resume <MdFileDownload />
           </Button>
           <a

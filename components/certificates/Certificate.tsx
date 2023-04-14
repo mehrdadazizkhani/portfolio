@@ -7,7 +7,6 @@ interface Props {
   data: {
     id: number;
     name: string;
-    logo: StaticImageData;
     image: StaticImageData;
     organization: string;
     date: string;
@@ -58,7 +57,7 @@ const Certificate = ({ data }: Props) => {
           variants={reflectionAnimation}
           initial="initial"
           animate="animate"
-          className="absolute w-[150%] h-full top-0 bg-gradient-to-r from-[#ffffff00] from-40% via-[#ffffff35] via-50% to-[#ffffff00] to-60%"
+          className="absolute w-[150%] h-full top-0 bg-gradient-to-r from-[#ffffff00] from-40% dark:via-[#ffffff35] via-[#ffffffba] via-50% to-[#ffffff00] to-60%"
         ></motion.div>
       </motion.div>
       <div className="flex md:w-1/2 w-full flex-col gap-4 items-center text-sm md:text-base">

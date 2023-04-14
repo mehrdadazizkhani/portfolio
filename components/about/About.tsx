@@ -1,18 +1,15 @@
 import AnimatedText from "../animatedText/AnimatedText";
 import Image from "next/image";
-import profilePhoto from "../../public/developer-pic-1.png";
+import profilePhoto from "../../public/profilepic.jpg";
 import Button from "../base/Button";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="w-full h-full overflow-y-scroll scrollbar-none p-2 snap-center flex justify-center items-center"
+      className="w-full h-full overflow-y-scroll scrollbar-none p-2 snap-center gap-12 flex justify-center items-center"
     >
-      <div className="hidden md:block">
-        <Image src={profilePhoto} alt={""} />
-      </div>
-      <div className="md:w-[600px]">
+      <div className="flex flex-col lg:w-1/2 gap-3 h-full items-center justify-center">
         <AnimatedText text="A talented Front-end developer with a unique background in architecture" />
         <p className="text-light-content dark:text-dark-content text-justify text-sm md:text-base">
           Hi there, I&apos;m Mehrdad Azizkhani, a front-end developer with a
@@ -28,12 +25,10 @@ const About = () => {
           importance of creating visually appealing and functional interfaces.
           <br />
           <br />
-          When I&apos;m not coding, you can find me playing computer games and
-          exploring the latest technology trends. I&apos;m passionate about
-          learning and growing both personally and professionally, and I&apos;m
-          always looking for new challenges and opportunities to expand my
-          skills. Thank you for taking the time to visit my portfolio website,
-          and I look forward to connecting with you!
+          I&apos;m passionate about learning and growing both personally and
+          professionally, and I&apos;m always looking for new challenges and
+          opportunities to expand my skills. Thank you for taking the time to
+          visit my portfolio website, and I look forward to connecting with you!
         </p>
         <div className="flex justify-center gap-2">
           <Button href={"#skills"}>skills</Button>

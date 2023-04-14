@@ -1,5 +1,3 @@
-import coursera from "../public/certificates/coursera.png";
-import quera from "../public/certificates/quera.png";
 import js from "../public/certificates/javascript.jpg";
 import react from "../public/certificates/react.jpg";
 import front from "../public/certificates/front.jpg";
@@ -10,7 +8,6 @@ const certificates = [
   {
     id: 1,
     name: "Programming with JavaScript",
-    logo: coursera,
     image: js,
     organization: "Coursera",
     date: "January 2023",
@@ -21,7 +18,6 @@ const certificates = [
   {
     id: 2,
     name: "React Basics",
-    logo: coursera,
     image: react,
     organization: "Coursera",
     date: "January 2023",
@@ -32,7 +28,6 @@ const certificates = [
   {
     id: 3,
     name: "Version Control",
-    logo: coursera,
     image: git,
     organization: "Coursera",
     date: "January 2023",
@@ -43,7 +38,6 @@ const certificates = [
   {
     id: 4,
     name: "HTML and CSS in depth",
-    logo: coursera,
     image: html,
     organization: "Coursera",
     date: "January 2023",
@@ -54,7 +48,6 @@ const certificates = [
   {
     id: 5,
     name: "Introduction to Front-End Development",
-    logo: coursera,
     image: front,
     organization: "Coursera",
     date: "January 2023",

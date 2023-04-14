@@ -1,6 +1,5 @@
 import Certificate from "./Certificate";
 import certificates from "../../data/certificates";
-import Image from "next/image";
 import { useState } from "react";
 import { RiArrowLeftSFill, RiArrowRightSFill } from "react-icons/ri";
 

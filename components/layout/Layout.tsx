@@ -19,7 +19,7 @@ const Layout = ({ children, title }: Props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="absolute h-[100dvh] w-full overflow-hidden z-50 bg-light-primary gap-2 dark:bg-dark-primary text-light-content dark:text-dark-content flex flex-col justify-center items-center portrait:hidden lg:landscape:hidden">
+      <div className="absolute h-[100dvh] w-full overflow-hidden z-50 bg-light-primary gap-2 dark:bg-dark-primary text-light-content dark:text-dark-content flex flex-col justify-center items-center portrait:hidden md:landscape:hidden">
         <div className="relative w-32 h-12 z-10">
           <SlScreenSmartphone
             size={50}

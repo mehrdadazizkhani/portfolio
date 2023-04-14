@@ -18,8 +18,8 @@ const About = () => {
             development.
           </p>
           <p className="italic px-6 md:px-8">
-            "If you&apos;re interested in viewing my past work in the field of
-            computational design and digital fabrication, please feel free to
+            &quot;If you&apos;re interested in viewing my past work in the field
+            of computational design and digital fabrication, please feel free to
             browse my architecture{" "}
             <a
               className="text-light-accent dark:text-dark-accent font-bold underline"
@@ -30,7 +30,7 @@ const About = () => {
             >
               portfolio
             </a>
-            ."
+            .&quot;
           </p>
           <p>
             I have a strong foundation in{" "}

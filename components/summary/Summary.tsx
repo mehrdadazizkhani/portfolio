@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import { MdFileDownload } from "react-icons/md";
-
 import profilePhoto from "../../public/developer-pic-1.png";
 import AnimatedText from "../animatedText/AnimatedText";
 import Button from "../base/Button";

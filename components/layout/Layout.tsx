@@ -40,7 +40,7 @@ const Layout = ({ children, title }: Props) => {
         <Header />
         <Navbar />
         <section className="md:h-[calc(100vh-192px)] h-[calc(100dvh-112px)] px-4 flex items-center justify-center container mx-auto">
-          <div className="w-[calc(100%-72px)] h-full overflow-hidden z-10">
+          <div className="relative w-[calc(100%-72px)] h-full z-10 overflow-y-scroll scrollbar-none snap-y snap-mandatory scroll-smooth">
             {children}
           </div>
         </section>

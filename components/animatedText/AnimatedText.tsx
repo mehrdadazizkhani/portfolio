@@ -36,7 +36,7 @@ const singleWordAnimation = {
 const AnimatedText = ({ text, hover = false }: Props) => {
   return (
     <motion.div
-      className={`flex lg:gap-3 gap-x-2 gap-y-1 w-full font-bold lg:text-4xl text-lg flex-wrap justify-center capitalize text-light-content dark:text-dark-content ${
+      className={`flex lg:gap-3 gap-x-2 gap-y-1 w-full font-bold lg:text-4xl text-lg flex-wrap justify-center text-light-content dark:text-dark-content ${
         hover && " md:hover:tracking-widest transition-all duration-300"
       }`}
       variants={textAnimation}

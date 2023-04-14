@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import Button from "../base/Button";
 import AnimatedText from "../animatedText/AnimatedText";
+import { motion } from "framer-motion";
 
 interface Props {
   data: {
@@ -16,36 +17,60 @@ interface Props {
 }
 
 const Certificate = ({ data }: Props) => {
+  const reflectionAnimation = {
+    initial: {
+      opacity: 0,
+      x: 150,
+    },
+    animate: {
+      opacity: 1,
+      x: -300,
+      transition: {
+        repeat: Infinity,
+        duration: 3,
+      },
+    },
+  };
+
+  const frameAnimation = {
+    initial: {
+      opacity: 0.7,
+      y: -30,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
   return (
-    <div className="flex flex-col items-center justify-between gap-3 text-light-content dark:text-dark-content w-full md:w-[400px] z-10">
-      <div className="mb-12 flex items-center justify-center">
-        <div className="relative aspect-square w-16">
-          <div className="absolute -bottom-[40px] left-[calc(50%-20px)] border-[20px] border-light-content border-b-[transparent] dark:border-dark-content dark:border-b-[transparent]"></div>
-          <div className="absolute h-full w-full animate-spin-slow">
-            <div className="absolute h-full w-full rotate-[0deg] bg-light-content dark:bg-dark-content"></div>
-            <div className="absolute h-full w-full rotate-[18deg] bg-light-content dark:bg-dark-content"></div>
-            <div className="absolute h-full w-full rotate-[36deg] bg-light-content dark:bg-dark-content"></div>
-            <div className="absolute h-full w-full rotate-[54deg] bg-light-content dark:bg-dark-content"></div>
-            <div className="absolute h-full w-full rotate-[72deg] bg-light-content dark:bg-dark-content"></div>
-          </div>
-          <div className="absolute h-full w-full rounded-full bg-dark-content dark:bg-light-content"></div>
-          <Image
-            src={data.logo}
-            alt={`${data.name} certificate`}
-            className="absolute h-full w-full rounded-full"
-          />
-        </div>
-      </div>
-      <div className="flex w-full flex-col gap-4 items-center">
+    <div className="flex flex-col items-center justify-between gap-6 text-light-content dark:text-dark-content w-full z-10">
+      <motion.div
+        variants={frameAnimation}
+        initial="initial"
+        animate="animate"
+        className="relative w-[200px] xl:w-[300px] p-4 xl:p-6 bg-light-primary dark:bg-dark-primary border-[6px] xl:border-[10px] border-dark-primary dark:border-light-primary shadow-md xl:shadow-lg shadow-light-content overflow-hidden"
+      >
+        <Image src={data.image} alt={data.name} />
+        <motion.div
+          variants={reflectionAnimation}
+          initial="initial"
+          animate="animate"
+          className="absolute w-[150%] h-full top-0 bg-gradient-to-r from-[#ffffff00] from-40% via-[#ffffff35] via-50% to-[#ffffff00] to-60%"
+        ></motion.div>
+      </motion.div>
+      <div className="flex md:w-1/2 w-full flex-col gap-4 items-center text-sm md:text-base">
         <AnimatedText text={data.name} />
-        <p className="flex w-full justify-between">
+        <p className="flex flex-col w-full justify-center items-center md:flex-row md:justify-between">
           <span className="font-semibold">Credential ID</span>{" "}
           {data.credentialId}
         </p>
-        <p className="flex w-full justify-between">
+        <p className="flex flex-col w-full justify-center items-center md:flex-row md:justify-between">
           <span className="font-semibold">Issue date</span> {data.date}
         </p>
-        <p className="flex w-full justify-between">
+        <p className="flex flex-col w-full justify-center items-center md:flex-row md:justify-between">
           <span className="font-semibold">Organization</span>{" "}
           {data.organization}
         </p>

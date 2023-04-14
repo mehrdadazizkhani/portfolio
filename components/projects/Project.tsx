@@ -66,7 +66,7 @@ const Project = ({ data }: Props) => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-3 md:gap-10 md:px-5 h-full w-full">
-      <div className="flex justify-center items-center pr-10">
+      <div className="flex justify-center items-center pr-10 select-none">
         <div className="flex justify-center items-end">
           <motion.div
             variants={laptopAnimation}

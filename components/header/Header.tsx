@@ -40,9 +40,6 @@ const Header = () => {
         >
           <SiGithub size={20} />
         </a>
-        <a className="social" href={""}>
-          <SiTwitter size={20} />
-        </a>
         <a
           className="social"
           href="https://instagram.com/mehrdadazizkhani"

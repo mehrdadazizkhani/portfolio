@@ -50,7 +50,7 @@ const Certificate = ({ data }: Props) => {
         variants={frameAnimation}
         initial="initial"
         animate="animate"
-        className="relative w-[200px] xl:w-[300px] p-4 xl:p-6 bg-light-primary dark:bg-dark-primary border-[6px] xl:border-[10px] border-dark-primary dark:border-light-primary shadow-md xl:shadow-lg shadow-light-content overflow-hidden"
+        className="relative select-none w-[200px] xl:w-[300px] p-4 xl:p-6 bg-light-primary dark:bg-dark-primary border-[6px] xl:border-[10px] border-dark-primary dark:border-light-primary shadow-md xl:shadow-lg shadow-light-content overflow-hidden"
       >
         <Image src={data.image} alt={data.name} />
         <motion.div

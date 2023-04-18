@@ -74,7 +74,7 @@ const Project = ({ data }: Props) => {
             animate="animate"
             className="relative w-28 md:w-56 z-10"
           >
-            <div className="absolute top-[5%] left-[12.5%] w-[75%] h-[74%] overflow-hidden">
+            <div className="absolute top-[5%] left-[12.5%] w-[75%] h-[74%] overflow-hidden bg-light-content">
               <Image
                 src={data.images[0]}
                 alt={""}
@@ -90,7 +90,7 @@ const Project = ({ data }: Props) => {
             <Image src={laptopMockup} alt={""} className="z-20" />
           </motion.div>
           <div className="relative w-28 md:w-56">
-            <div className="absolute top-[5%] left-[4%] w-[92%] h-[62%] overflow-hidden">
+            <div className="absolute top-[5%] left-[4%] w-[92%] h-[62%] overflow-hidden bg-light-content">
               <Image src={data.images[0]} alt={""} className="" />
               <motion.div
                 variants={reflectionAnimation}
@@ -107,7 +107,7 @@ const Project = ({ data }: Props) => {
             animate="animate"
             className="relative w-7 md:w-14"
           >
-            <div className="absolute flex top-[2.5%] left-[6%] w-[88%] rounded-[5%] h-[95%] overflow-hidden">
+            <div className="absolute flex top-[2.5%] left-[6%] w-[88%] rounded-[5%] h-[95%] overflow-hidden bg-light-content">
               <Image src={data.images[1]} alt={""} className="" />
               <motion.div
                 variants={reflectionAnimation}

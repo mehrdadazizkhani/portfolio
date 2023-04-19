@@ -34,16 +34,6 @@ const projects = [
     githubURL: "https://github.com/mehrdadazizkhani/car-rent",
     demoURL: "https://portfolio-mehrdadazizkhani.vercel.app/",
   },
-  {
-    id: 4,
-    name: "Untitled",
-    images: [,],
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, quis nulla. Minima sint ut eius aliquam aliquid fugiat ducimus perferendis voluptates. Odio labore vel numquam magnam perferendis omnis sapiente praesentium dolorem doloribus.",
-    stack: ["Nextjs", "TypeScript", "Tailwindcss", "Framer Motion"],
-    githubURL: "https://github.com/mehrdadazizkhani/portfolio",
-    demoURL: "https://portfolio-mehrdadazizkhani.vercel.app/",
-  },
 ];
 
 export default projects;

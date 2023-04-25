@@ -1,9 +1,12 @@
 import Link from "next/link";
 import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
-import { SiLinkedin, SiGithub, SiTwitter, SiInstagram } from "react-icons/si";
+import { SiLinkedin, SiGithub, SiInstagram } from "react-icons/si";
 import SincWave from "../sincWave/SincWave";
+import { ThemeContext } from "@/context/ThemProvider";
+import { useContext } from "react";
 
 const Header = () => {
+  const { color } = useContext(ThemeContext);
   return (
     <nav className="container mx-auto flex items-center justify-between px-12 md:px-20 h-14 md:h-24 overflow-hidden">
       <div className="flex items-center gap-3 bg-light-primary dark:bg-dark-primary z-20">
@@ -17,7 +20,7 @@ const Header = () => {
       <div className="relative flex items-center justify-center gap-4 z-20 lg:w-[500px] lg:h-[160px]">
         <div className="absolute hidden h-full w-full lg:flex bg-light-primary dark:bg-dark-primary text-light-content dark:text-dark-content">
           <SincWave
-            color={"#3563E9"}
+            color={color}
             thickness={0.5}
             scale={16}
             frequency={0.02}

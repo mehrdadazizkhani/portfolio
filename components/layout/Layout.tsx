@@ -2,8 +2,9 @@ import { ReactNode } from "react";
 import Header from "../header/Header";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
-import { SlScreenSmartphone } from "react-icons/sl";
 import Head from "next/head";
+import ThemProvider from "@/context/ThemProvider";
+import RotateScreen from "../rotateScreen/RotateScreen";
 
 interface Props {
   children?: ReactNode;
@@ -19,38 +20,24 @@ const Layout = ({ children, title }: Props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="absolute h-[100dvh] w-full overflow-hidden z-50 bg-light-primary gap-2 dark:bg-dark-primary text-light-content dark:text-dark-content flex flex-col justify-center items-center portrait:hidden lg:landscape:hidden">
-        <div className="relative w-32 h-12 z-10">
-          <SlScreenSmartphone
-            size={50}
-            className="absolute bottom-0 opacity-10"
-          />
-          <SlScreenSmartphone
-            size={50}
-            className="absolute bottom-0 rotate-45 opacity-30 origin-bottom-right"
-          />
-          <SlScreenSmartphone
-            size={50}
-            className="absolute bottom-0 rotate-90 origin-bottom-right animate-pulse"
-          />
-        </div>
-        <p className="uppercase font-semibold z-10">please turn your phone</p>
-      </div>
-      <main className="bg-light-primary dark:bg-dark-primary relative">
-        <Header />
-        <Navbar />
-        <section className="md:h-[calc(100vh-192px)] h-[calc(100dvh-112px)] px-4 flex items-center justify-center container mx-auto">
-          <div className="relative w-[calc(100%-72px)] h-full z-10 overflow-y-scroll scrollbar-none snap-y snap-mandatory scroll-smooth">
-            {children}
+      <RotateScreen />
+      <ThemProvider>
+        <main className="bg-light-primary dark:bg-dark-primary relative">
+          <Header />
+          <Navbar />
+          <section className="md:h-[calc(100vh-192px)] h-[calc(100dvh-112px)] px-4 flex items-center justify-center container mx-auto">
+            <div className="relative w-[calc(100%-72px)] h-full z-10 overflow-y-scroll scrollbar-none snap-y snap-mandatory scroll-smooth">
+              {children}
+            </div>
+          </section>
+          <Footer />
+          <div className="absolute top-0 w-full h-full flex justify-center items-center">
+            <div className="mx-auto container flex justify-center items-center">
+              <div className="md:h-[calc(100vh-96px)] h-[calc(100dvh-56px)] rounded-xl md:w-[calc(100%-72px)] w-[calc(100%-50px)] border-[1.5px] border-[#666666] dark:border-[#888888]"></div>
+            </div>
           </div>
-        </section>
-        <Footer />
-        <div className="absolute top-0 w-full h-full flex justify-center items-center">
-          <div className="mx-auto container flex justify-center items-center">
-            <div className="md:h-[calc(100vh-96px)] h-[calc(100dvh-56px)] rounded-xl md:w-[calc(100%-72px)] w-[calc(100%-50px)] border border-light-accent dark:border-dark-accent"></div>
-          </div>
-        </div>
-      </main>
+        </main>
+      </ThemProvider>
     </>
   );
 };
